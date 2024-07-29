@@ -1,8 +1,8 @@
 
 export default function About() {
     return (
-        <div>
+        <section className="section flex items-center bg-pink-200" id="sobre">
             About
-        </div>
+        </section>
     );
 }

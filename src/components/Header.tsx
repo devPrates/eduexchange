@@ -5,9 +5,12 @@ import { Link } from "react-scroll";
 import SearchMobile from "./SearchMobile";
 import { useMediaQuery } from 'react-responsive';
 import { Menu, CircleX } from "lucide-react"
+import { SearchContext } from "@/context/search";
  
 
 export default function Header() {
+    const { setSearchActive } = useContext(SearchContext)
+
     const [header, setHeader] = useState(false);
     const [nav, setNav] = useState(false);
 
@@ -21,6 +24,12 @@ export default function Header() {
                 setHeader(true);
             } else {
                 setHeader(false)
+            }
+
+            if(window.scrollY > 800){
+                setSearchActive(true);
+            } else {
+                setSearchActive(false)
             }
         }
         window.addEventListener('scroll', handleScroll);

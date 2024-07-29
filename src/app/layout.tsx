@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SearchContextProvider } from "@/context/search";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <SearchContextProvider>
+      <html lang="pt-BR">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </SearchContextProvider>
   );
 }
