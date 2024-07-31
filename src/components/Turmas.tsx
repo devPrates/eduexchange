@@ -2,7 +2,7 @@ import TurmaSlider from "./TurmaSlider";
 
 export default function Turmas() {
     return (
-        <section className="h-screen flex items-center bg-yellow-200" id="turmas">
+        <section className="h-screen flex items-center" id="turmas">
             <div className="container mx-auto">
                 <div className="flex justify-center mb-6">
                     <h1 className="h1">Quadro de Horarios de Aulas </h1>
