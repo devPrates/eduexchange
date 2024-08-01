@@ -9,122 +9,81 @@ import { Button } from "./ui/button";
 
 const dados = [
     {
+        tipo: 'Troca de Aula',
         turma: '3222',
         curso: 'Analise de Sistemas',
         semestre: '3 semestre',
-        icone: './informatica.svg',
         aulas: [
             {
+                sala: 'Laboratorio de Informatica',
+                Professor: 'Marcos',
                 horas: '07:00 - 11:20',
-                name: 'Segunda',
+                data: '15/08/2024',
             },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Terça',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quarta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quinta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Sexta',
-            }
         ]
     },
     {
-        turma: '3223',
-        curso: 'Agronomia',
-        semestre: '5 semestre',
-        icone: './agronomia.svg',
-        aulas: [
-            {
-                horas: '07:00 - 11:20',
-                name: 'Segunda',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Terça',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quarta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quinta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Sexta',
-            }
-        ]
-    },
-    {
-        turma: '3224',
-        curso: 'Manutenção de Computadores',
-        semestre: '1 semestre',
-        icone: './manutenção.svg',
-        aulas: [
-            {
-                horas: '07:00 - 11:20',
-                name: 'Segunda',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Terça',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quarta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quinta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Sexta',
-            }
-        ]
-    },
-    {
-        turma: '3225',
+        tipo: 'Troca de Aula',
+        turma: '3222',
         curso: 'Analise de Sistemas',
-        semestre: '2 semestre',
-        icone: './informatica.svg',
+        semestre: '3 semestre',
         aulas: [
             {
+                sala: 'Laboratorio de Informatica',
+                Professor: 'Marcos',
                 horas: '07:00 - 11:20',
-                name: 'Segunda',
+                data: '15/08/2024',
             },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Terça',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quarta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Quinta',
-            },
-            {
-                horas: '07:00 - 11:20',
-                name: 'Sexta',
-            }
         ]
     },
+    {
+        tipo: 'Troca de Aula',
+        turma: '3222',
+        curso: 'Analise de Sistemas',
+        semestre: '3 semestre',
+        aulas: [
+            {
+                sala: 'Laboratorio de Informatica',
+                Professor: 'Marcos',
+                horas: '07:00 - 11:20',
+                data: '15/08/2024',
+            },
+        ]
+    },
+    {
+        tipo: 'Troca de Aula',
+        turma: '3222',
+        curso: 'Analise de Sistemas',
+        semestre: '3 semestre',
+        aulas: [
+            {
+                sala: 'Laboratorio de Informatica',
+                Professor: 'Marcos',
+                horas: '07:00 - 11:20',
+                data: '15/08/2024',
+            },
+        ]
+    },
+    {
+        tipo: 'Troca de Aula',
+        turma: '3222',
+        curso: 'Analise de Sistemas',
+        semestre: '3 semestre',
+        aulas: [
+            {
+                sala: 'Laboratorio de Informatica',
+                Professor: 'Marcos',
+                horas: '07:00 - 11:20',
+                data: '15/08/2024',
+            },
+        ]
+    },
+
 ]
 
 export default function TurmaSlider() {
     return (
-        <motion.div 
+        <motion.div
             variants={fadeIn('up', 0.4)}
             initial='hidden'
             whileInView={'show'}
@@ -140,38 +99,27 @@ export default function TurmaSlider() {
             >
                 {dados.map((dado, index) => {
                     return (
-                        <SwiperSlide 
+                        <SwiperSlide
                             key={index}
                         >
-                            <div className="max-w-[385px] mx-auto sm:mx-0 bg-gray-100 p-2 rounded-lg shadow-lg">
-                                <div className="flex justify-start gap-2">
-                                    <Image 
-                                        src={dado.icone}
-                                        width={100}
-                                        height={100}
-                                        alt="logo curso"
-                                    />
-                                    
-
-                                    <div>
-                                        <div className="flex gap-1 items-center">
-                                            <p className="font-bold text-sm text-black">Turma:</p>
-                                            <p className="text-sm text-gray-700">{dado.turma}</p>
-                                        </div>
-                                        <div className="flex gap-1 items-center">
-                                            <p className="font-bold text-sm text-black">Turma:</p>
-                                            <p className="text-sm text-gray-700">{dado.turma}</p>
-                                        </div>
-                                        <div>{dado.semestre}</div>
-                                    </div>
+                            <div className="max-w-[385px] mx-auto sm:mx-0 bg-gray-100 px-6 rounded-lg shadow-lg">
+                                <h3 className="h3 flex justify-center">{dado.tipo}</h3>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-lg font-bold text-gray-700">{dado.curso}</p>
+                                    <p>{dado.turma}</p>
                                 </div>
-                                <div>                                
-                                 <div>
+                                    <p>{dado.semestre}</p>
+                                <div className="mt-4">
+                                    <div>
                                         {dado.aulas.map((item, index) => {
                                             return (
                                                 <div key={index} className="flex gap-3">
-                                                    <div>{item.name}</div>
-                                                    <div>{item.horas}</div>
+                                                    <div className="flex ">
+                                                        {item.Professor}
+                                                        {item.data}
+                                                        {item.horas}
+                                                        {item.sala}
+                                                    </div>
                                                 </div>
                                             )
                                         })}

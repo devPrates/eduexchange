@@ -12,7 +12,7 @@ import { fadeIn } from "../../variants";
 export default function Hero() {
     const { searchActive } = useContext(SearchContext)
     return (
-        <section className="h-screen xl:h-[90vh] bg-[#b2b7c2]/10" id="home">
+        <section className="h-screen xl:h-[90vh] bg-[#b2b7c2]/10 bg-hero-image" id="home">
             <div className="container mx-auto h-full xl:pt-10">
                 <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
                     <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
@@ -41,11 +41,11 @@ export default function Hero() {
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.8 }}
                         >
-                            <Button size="lg">
-                                <CalendarClock className="mr-2 h-4 w-4" />Quadro de Horarios
+                            <Button>
+                                <CalendarClock className="mr-2 h-5 w-5" />Quadro de Horarios
                             </Button>
-                            <Button size="lg">
-                                <ShieldCheck className="mr-2 h-4 w-4" />Acessar Sistema
+                            <Button>
+                                <ShieldCheck className="mr-2 h-5 w-5" />Acessar Sistema
                             </Button>
                         </motion.div>
                     </div>
