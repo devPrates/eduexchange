@@ -61,7 +61,7 @@ export default function Header() {
 
                 <nav className={`${ nav ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0 xl:max-h-max'} flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
                     <Link 
-                        className="cursor-pointer"
+                        className="cursor-pointer font-semibold"
                         to="home"
                         activeClass="active"
                         smooth={desktopMode}
@@ -69,7 +69,7 @@ export default function Header() {
                     > Home </Link>
 
                     <Link 
-                        className="cursor-pointer"
+                        className="cursor-pointer font-semibold"
                         to="turmas"
                         activeClass="active"
                         smooth={desktopMode}
@@ -77,7 +77,7 @@ export default function Header() {
                     > Turmas </Link>
 
                     <Link 
-                        className="cursor-pointer"
+                        className="cursor-pointer font-semibold"
                         to="sobre"
                         activeClass="active"
                         smooth={desktopMode}
@@ -85,7 +85,7 @@ export default function Header() {
                     > Sobre </Link>
 
                     <Link 
-                        className="cursor-pointer"
+                        className="cursor-pointer font-semibold"
                         to="why"
                         activeClass="active"
                         smooth={desktopMode}
@@ -93,7 +93,7 @@ export default function Header() {
                     > Serviços </Link>
 
                     <Link 
-                        className="cursor-pointer"
+                        className="cursor-pointer font-semibold"
                         to="contact"
                         activeClass="active"
                         smooth={desktopMode}

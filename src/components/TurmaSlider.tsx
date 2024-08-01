@@ -143,20 +143,30 @@ export default function TurmaSlider() {
                         <SwiperSlide 
                             key={index}
                         >
-                            <div className="max-w-[385px] mx-auto sm:mx-0 bg-gray-100">
-                                <Image 
-                                    src={dado.icone}
-                                    width={100}
-                                    height={100}
-                                    alt="logo curso"
-                                />
-                                <div>
+                            <div className="max-w-[385px] mx-auto sm:mx-0 bg-gray-100 p-2 rounded-lg shadow-lg">
+                                <div className="flex justify-start gap-2">
+                                    <Image 
+                                        src={dado.icone}
+                                        width={100}
+                                        height={100}
+                                        alt="logo curso"
+                                    />
+                                    
+
                                     <div>
-                                        <div>{dado.turma}</div>
-                                        <div>{dado.curso}</div>
+                                        <div className="flex gap-1 items-center">
+                                            <p className="font-bold text-sm text-black">Turma:</p>
+                                            <p className="text-sm text-gray-700">{dado.turma}</p>
+                                        </div>
+                                        <div className="flex gap-1 items-center">
+                                            <p className="font-bold text-sm text-black">Turma:</p>
+                                            <p className="text-sm text-gray-700">{dado.turma}</p>
+                                        </div>
                                         <div>{dado.semestre}</div>
                                     </div>
-                                    <div>
+                                </div>
+                                <div>                                
+                                 <div>
                                         {dado.aulas.map((item, index) => {
                                             return (
                                                 <div key={index} className="flex gap-3">

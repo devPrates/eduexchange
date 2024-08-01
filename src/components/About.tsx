@@ -5,14 +5,13 @@ import { fadeIn } from "../../variants";
 import { GitCompareArrows, GitPullRequestArrow, CalendarClock } from 'lucide-react';
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { Button } from "./ui/button";
 
 export default function About() {
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
     return (
-        <section className="section flex items-center bg-pink-200" id="sobre" ref={ref}>
+        <section className="section flex items-center" id="sobre" ref={ref}>
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:justify-between">
                     <motion.div
