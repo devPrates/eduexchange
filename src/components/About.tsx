@@ -23,7 +23,7 @@ export default function About() {
                     >
                         <Image
                             className="rounded-[20px]"
-                            src={'./heroImage.svg'}
+                            src={'./aboutImage.svg'}
                             width={600}
                             height={600}
                             alt="aa"
@@ -68,8 +68,8 @@ export default function About() {
                                         ) : null}
                                         +
                                     </div>
-                                    <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        troca de <br /> aulas
+                                    <div className="text-[13px] font-semibold text-gray-700">
+                                        troca de <br /> Aulas
                                     </div>
                                 </div>
 
@@ -82,8 +82,8 @@ export default function About() {
                                         ) : null}
                                         +
                                     </div>
-                                    <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        troca de <br /> aulas
+                                    <div className="text-[13px] font-semibold text-gray-700">
+                                        troca de <br /> Aulas
                                     </div>
                                 </div>
 
@@ -96,8 +96,8 @@ export default function About() {
                                         ) : null}
                                         +
                                     </div>
-                                    <div className="uppercase text-[13px] font-semibold text-secondary">
-                                        troca de <br /> aulas
+                                    <div className="text-[13px] font-semibold text-gray-700">
+                                        troca de <br /> Aulas
                                     </div>
                                 </div>
 
@@ -108,9 +108,9 @@ export default function About() {
                                 initial='hidden'
                                 whileInView={'show'}
                                 viewport={{ once: false, amount: 0.6 }}
-                                className="hidden xl:block bg-green-500 hover:bg-green-400 rounded-[10px] w-full h-16 uppercase font-medium text-white tracking-[2px] text-[16px] max-w-[184px]" 
+                                className="hidden xl:block bg-green-500 hover:bg-green-400 transition-colors duration-300 rounded-[10px] w-full h-12 font-semibold text-white tracking-[2px] text-[14px] max-w-[184px]" 
                             >
-                                Ver mais +
+                                Ver mais
                             </motion.button>
                         </div>
                     </div>
