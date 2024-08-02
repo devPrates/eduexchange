@@ -7,6 +7,7 @@ import { fadeIn } from "../../variants";
 import { Button } from "./ui/button";
 import { UserRound, BookText, Calendar, Clock, MapPin, GitCompareArrows, GitPullRequestArrow } from 'lucide-react';
 import { Separator } from "./ui/separator";
+import { Pagination } from "swiper/modules";
 
 const dados = [
     {
