@@ -11,10 +11,12 @@ import { ScanSearch } from 'lucide-react';
 export default function Search() {
     const { searchActive } = useContext(SearchContext)
     return (
-        <div className={`${searchActive
-                ? 'bg-white rounded-none xl:h-[80px]'
-                : 'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[98px]'
-            } hidden xl:block w-full relative shadow-lg`}>
+        <div className={`${
+                searchActive
+                    ? 'bg-white rounded-none xl:h-[80px]'
+                    : 'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[98px]'
+            } hidden xl:block w-full relative shadow-lg`}
+            >
             <div className={`flex h-full ${searchActive && 'container mx-auto'}`}>
                 <LocationSelection />
                 <DateSelection />
@@ -22,8 +24,8 @@ export default function Search() {
 
                 <div className="xl:h-full flex items-center px-6 xl:px-0">
                     <Button 
-                    size={"lg"}>
-                        <ScanSearch className="mr-2 h-4 w-4" /> Buscar Horario
+                    size={"lg"} className="font-bold text-lg">
+                        Buscar 
                     </Button>
                 </div>
             </div>
