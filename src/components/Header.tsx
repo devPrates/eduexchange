@@ -109,6 +109,12 @@ export default function Header() {
                         spy={true}
                     > Contato </Link>
 
+                    <a 
+                        href="/login"
+                        className="cursor-pointer font-semibold bg-green-400 rounded-sm"
+                        
+                    > Login </a>
+
                     <Link 
                         className="xl:hidden btn btn-primary btn-sm max-w-[124px] mx-auto"
                         to="/"
