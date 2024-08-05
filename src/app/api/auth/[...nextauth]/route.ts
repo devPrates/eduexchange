@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth/next'
 import { NextAuthOptions } from 'next-auth'
 import CredentialProvider from 'next-auth/providers/credentials'
-import Email from 'next-auth/providers/email'
 
 const authOptions: NextAuthOptions = {
     providers: [
@@ -29,7 +28,31 @@ const authOptions: NextAuthOptions = {
                 return user
             }
         })
-    ]
+    ],
+    callbacks: {
+        jwt: ({ token, user }) => {
+            const customUser = user as unknown as any
+            
+            if(user) {
+                return {
+                    ...token,
+                    role: customUser.role
+                }
+            }
+
+            return token
+        },
+        session: async ({ session, token }) => {
+            return {
+                ...session,
+                user: {
+                    name: token.name,
+                    email: token.email,
+                    role: token.role
+                }
+            } 
+        }
+    },
 }
 
 const handler = NextAuth(authOptions)

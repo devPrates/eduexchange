@@ -110,7 +110,7 @@ export default function Header() {
                     > Contato </Link>
 
                     <a 
-                        href="/login"
+                        href="/dashboard"
                         className="cursor-pointer font-semibold bg-green-400 rounded-sm"
                         
                     > Login </a>
