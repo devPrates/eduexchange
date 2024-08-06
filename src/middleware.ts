@@ -9,7 +9,7 @@ const middleware = (request: NextRequestWithAuth) => {
     const isAdminUser = request.nextauth.token?.role === 'admin'
 
     if(isPrivateRoutes && !isAdminUser) {
-        return NextResponse.rewrite(new URL('/denid', request.url))
+        return NextResponse.rewrite(new URL('/denied', request.url))
     }
 }
 
