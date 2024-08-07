@@ -1,14 +1,16 @@
 'use client'
 import { useState } from "react"
 import CustomLink from "./customLink";
-import { Bolt, Box, ChevronLeft, ChevronRight, LayoutDashboard, UsersRound } from "lucide-react";
+import { Bolt, Box, ChevronLeft, ChevronRight, FilePen, GitCompareArrows, GitPullRequestArrow, LayoutDashboard, UsersRound } from "lucide-react";
 import { Button } from "./ui/button";
 import { seed } from "@/dataDashboard";
 
 const iconMap: Record<string, React.FC<{}>> = {
     dashboard: LayoutDashboard,
     users: UsersRound,
-    orders: Box,
+    substituicao: GitPullRequestArrow,
+    troca: GitCompareArrows,
+    solicitacoes: FilePen,
     settings: Bolt, 
 }
 
