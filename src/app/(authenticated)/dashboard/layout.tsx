@@ -1,3 +1,5 @@
+import Dash from "@/components/Dash";
+import Nav from "@/components/Nav";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -5,12 +7,11 @@ type LayoutProps = {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html>
-      <body>
-        <header>Header do Dashboard</header>
-        <aside>Menu Lateral do Dashboard</aside>
-        <main>{children}</main>
-      </body>
-    </html>
+      <div className="min-h-screen w-full bg-white text-black flex">
+        <Nav />
+        <Dash>
+          {children}
+        </Dash>
+      </div>
   );
 }
