@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Software de Troca e Substituição de aulas",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -20,7 +20,9 @@ export default function RootLayout({
     <AuthProvider>
       <SearchContextProvider>
         <html lang="pt-BR">
-          <body className={inter.className}>{children}</body>
+          <body className={inter.className}>
+            {children}
+          </body>
         </html>
       </SearchContextProvider>
     </AuthProvider>

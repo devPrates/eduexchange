@@ -18,5 +18,5 @@ const callbackOptions: NextAuthMiddlewareOptions = {}
 export default withAuth(middleware, callbackOptions)
 
 export const config = {
-    matcher: '/dashboard'
+    matcher: ['/dashboard/:path*'],
 }
