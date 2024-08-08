@@ -6,6 +6,10 @@ export type CustomLinksProps = {
     nome: string
 }
 
+export type DashNavbarProps = {
+    title: string;
+}
+
 export type CardProps = {
     label: string;
     icon: LucideIcon;
