@@ -63,16 +63,9 @@ export default function Nav() {
                             </li>
                         )
                     })
-
                     }
                 </ul>
             </div>
-            <Button onClick={() => signOut()} className="bg-red-500 hover:bg-red-400 flex items-center justify-center">
-                <LogOut className="mr-2 h-5 w-5" /> 
-                <span className={`${isOpen ? 'hidden sm:block' : '!hidden'} font-bold text-sm`}>
-                        Sair
-                </span>
-            </Button>
         </nav>
     )
 }

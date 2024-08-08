@@ -5,9 +5,9 @@ import React from "react"
 export default function DashCard(props: CardProps) {
     return (
         <CardContent>
-            <section className="flex justify-between gap-2">
-                <p className="text-sm">{props.label}</p>
-                <props.icon className="h-4 w-4 text-gray-400" />
+            <section className="flex justify-between items-center gap-2">
+                <p className="text-lg font-bold">{props.label}</p>
+                <props.icon className="h-6 w-6 text-black" />
             </section>
             <section className="flex flex-col gap-1">
                 <h2 className="text-2xl font-semibold">{props.amount}</h2>

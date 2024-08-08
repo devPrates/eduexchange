@@ -41,7 +41,7 @@ import { Input } from "./ui/input";
 
 
 
-export default function DashNavbar({ title }: DashNavbarProps) {
+export default function DashNavbar() {
     const { data: session } = useSession()
     return (
         <section className="py-3 px-5 border-b-[1px]">
@@ -59,7 +59,7 @@ export default function DashNavbar({ title }: DashNavbarProps) {
                     <Bell />
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <div className="flex gap-x-2 p-2 items-center border-[1px] rounded-lg">
+                            <div className="flex gap-x-2 p-2 items-center border-[1px] rounded-lg hover:cursor-pointer">
                                 <Avatar>
                                     <AvatarImage src="https://github.com/shadcn.png" />
                                     <AvatarFallback>CN</AvatarFallback>
@@ -77,29 +77,20 @@ export default function DashNavbar({ title }: DashNavbarProps) {
                                 <DropdownMenuItem>
                                     <User className="mr-2 h-4 w-4" />
                                     <span>Perfil</span>
-                                    <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
                                     <Settings className="mr-2 h-4 w-4" />
-                                    <span>Configura</span>
-                                    <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                                    <span>Configurações</span>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem>
+                                <DropdownMenuItem disabled>
                                     <CreditCard className="mr-2 h-4 w-4" />
-                                    <span>Billing</span>
-                                    <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem>
-                                    <Keyboard className="mr-2 h-4 w-4" />
-                                    <span>Keyboard shortcuts</span>
-                                    <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+                                    <span>Pagamentos</span>
                                 </DropdownMenuItem>
                             </DropdownMenuGroup>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>
+                            <DropdownMenuItem className="text-red-500">
                                 <LogOut className="mr-2 h-4 w-4" />
                                 <span>Sair</span>
-                                <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
