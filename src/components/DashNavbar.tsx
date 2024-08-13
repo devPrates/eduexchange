@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import DashTitle from "./dashTitle";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Card } from "./ui/card";
@@ -88,7 +88,7 @@ export default function DashNavbar() {
                                 </DropdownMenuItem>
                             </DropdownMenuGroup>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem className="text-red-500">
+                            <DropdownMenuItem className="text-red-500" onClick={() => signOut()}>
                                 <LogOut className="mr-2 h-4 w-4" />
                                 <span>Sair</span>
                             </DropdownMenuItem>
