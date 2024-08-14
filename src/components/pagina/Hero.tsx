@@ -3,11 +3,11 @@
 import { useContext } from "react";
 import Search from "./Search";
 import { SearchContext } from "@/context/search";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { CalendarClock, ShieldCheck } from 'lucide-react';
 import Image from "next/image";
 import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/types/variants";
 
 export default function Hero() {
     const { searchActive } = useContext(SearchContext)

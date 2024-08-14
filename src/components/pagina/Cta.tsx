@@ -8,7 +8,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Input } from "@/components/ui/input"
-import { Button } from './ui/button';
+import { Button } from "../ui/button"
 import { Label } from "@/components/ui/label"
 
 export default function Cta() {

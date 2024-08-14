@@ -5,8 +5,7 @@ import { useContext } from "react"
 import LocationSelection from "./LocationSection";
 import DateSelection from "./DateSelection";
 import HoursSelection from "./HoursSelection";
-import { Button } from "./ui/button";
-import { ScanSearch } from 'lucide-react';
+import { Button } from "../ui/button";
 
 export default function Search() {
     const { searchActive } = useContext(SearchContext)

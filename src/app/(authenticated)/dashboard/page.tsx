@@ -5,17 +5,14 @@ import { seed } from "@/dataDashboard";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
-import { BookA, BookAIcon, CirclePlus, Filter, HouseIcon, User } from "lucide-react";
+import { BookA, BookAIcon, CirclePlus, Filter, GraduationCap, HouseIcon, School, User, User2 } from "lucide-react";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import TableCursos from "@/components/TableCursos";
-import { useSession } from "next-auth/react";
+import { DataTableDemo } from "@/components/tables/TableCursos";
   
 
 
 export default function Dashboard() {
-    const { data: session } = useSession()
-    const userRole = session?.user?.role
     const { cardData } = seed
     const [position, setPosition] = useState("top")
     return (
@@ -54,10 +51,9 @@ export default function Dashboard() {
                     <Tabs defaultValue="account" className="">
                         <div className="container mt-5 flex justify-between">
                             <TabsList className="bg-gray-500 text-white">
-                                <TabsTrigger value="account">Cursos</TabsTrigger>
-                                <TabsTrigger value="professores">Professores</TabsTrigger>
-                                <TabsTrigger value="turmas">Turmas</TabsTrigger>
-                                <TabsTrigger value="disciplinas">Disciplinas</TabsTrigger>
+                                <TabsTrigger value="account">Campus</TabsTrigger>
+                                <TabsTrigger value="professores">Diretores</TabsTrigger>
+                                <TabsTrigger value="turmas">Coordenadores</TabsTrigger>
                             </TabsList>
                             <div className="flex gap-1">
                                 <DropdownMenu>
@@ -84,28 +80,20 @@ export default function Dashboard() {
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent className="w-56">
-                                        <DropdownMenuLabel>O que deseja</DropdownMenuLabel>
+                                        <DropdownMenuLabel>O que deseja cadastrar</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
                                         <DropdownMenuGroup>
                                             <DropdownMenuItem>
-                                                <User className="mr-2 h-4 w-4" />
-                                                <span>Professor</span>
-
+                                                <School className="mr-2 h-4 w-4" />
+                                                <span>Campus</span>
                                             </DropdownMenuItem>
                                             <DropdownMenuItem>
-                                                <BookAIcon className="mr-2 h-4 w-4" />
-                                                <span>Curso</span>
-
+                                                <GraduationCap className="mr-2 h-4 w-4" />
+                                                <span>Diretor</span>
                                             </DropdownMenuItem>
                                             <DropdownMenuItem>
-                                                <HouseIcon className="mr-2 h-4 w-4" />
-                                                <span>Turma</span>
-
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem>
-                                                <BookA className="mr-2 h-4 w-4" />
-                                                <span>Disciplina</span>
-
+                                                <User2 className="mr-2 h-4 w-4" />
+                                                <span>Coordenador</span>
                                             </DropdownMenuItem>
                                         </DropdownMenuGroup>
                                     </DropdownMenuContent>
@@ -113,12 +101,11 @@ export default function Dashboard() {
                             </div>
                         </div>
                         <div className="container mt-6">
-                            <TabsContent value="account" className="border-[1px] max-h-[300px] overflow-x-auto">
-                                <TableCursos />
+                            <TabsContent value="account" >
+                                <DataTableDemo />
                             </TabsContent>
                             <TabsContent value="professores">Professores</TabsContent>
                             <TabsContent value="turmas">turmas</TabsContent>
-                            <TabsContent value="disciplinas">Disciplinas</TabsContent>
                         </div>
                     </Tabs>
                 </div>

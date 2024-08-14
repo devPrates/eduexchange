@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/types/variants";
 import { GitCompareArrows, GitPullRequestArrow, CalendarClock } from 'lucide-react';
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
