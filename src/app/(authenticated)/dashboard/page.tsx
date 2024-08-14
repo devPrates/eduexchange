@@ -8,15 +8,6 @@ import { Button } from "@/components/ui/button";
 import { BookA, BookAIcon, CirclePlus, Filter, HouseIcon, User } from "lucide-react";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "@/components/ui/table"
 import TableCursos from "@/components/TableCursos";
 import { useSession } from "next-auth/react";
   

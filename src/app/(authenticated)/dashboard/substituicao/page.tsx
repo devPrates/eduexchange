@@ -27,7 +27,6 @@ import { useState } from "react";
 
 export default function Substituicao() {
     const [date, setDate] = useState<Date>()
-    const { cardDataSubs } = seed
     return (
         <section className="flex flex-col gap-5 w-full">
             <DashNavbar />
@@ -46,22 +45,6 @@ export default function Substituicao() {
                 </Breadcrumb>
             </div>
 
-            <div className=" container grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
-
-                {cardDataSubs.map((card => {
-                    return (
-                        <DashCard
-                            key={card.id}
-                            amount={card.amout}
-                            discription={card.description}
-                            icon={card.icon}
-                            label={card.Label}
-                        />
-                    )
-
-                }))
-                }
-            </div>
 
 
             <section className="container mt-3 p-2 bg-gray-400 rounded-lg flex gap-3">

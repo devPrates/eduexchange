@@ -1,41 +1,56 @@
 import { Users, BookAIcon, HouseIcon, BadgeCheck, SquareX, CircleAlert, BellRing } from "lucide-react";
 
+export const itensMenuProfessor = [
+    { id: 1, title: 'Painel', link: '/dashboard/painel', icon: 'dashboard' },
+    { id: 2, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+    { id: 3, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+    { id: 4, title: 'Documentos', link: '/dashboard/docs', icon: 'solicitacoes' },
+    { id: 5, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
+
+];
+export const itensMenuCoordenador = [
+    { id: 1, title: 'Dashboard', link: '/dashboard/cpainel', icon: 'dashboard' },
+    { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
+    { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+    { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+    { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 6, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
+
+];
+export const itensMenuDiretor = [
+    { id: 1, title: 'Dashboard', link: '/dashboard/dpainel', icon: 'dashboard' },
+    { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
+    { id: 3, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 4, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
+
+]
+
+export const itensMenuAdmin = [
+    { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
+    { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
+    { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+    { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+    { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 6, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
+
+]
+
+export const getMenuItemsByRole = (role: string) => {
+    switch (role) {
+        case 'admin':
+            return itensMenuAdmin;
+        case 'diretor':
+            return itensMenuDiretor;
+        case 'coordenador':
+            return itensMenuCoordenador;
+        case 'professor':
+            return itensMenuProfessor;
+        default:
+            return [];
+    }
+};
+
 export const seed = {
-    itensMenuProfessor: [
-        { id: 1, title: 'Painel', link: '/dashboard/painel', icon: 'dashboard' },
-        { id: 2, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
-        { id: 3, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-        { id: 4, title: 'Documentos', link: '/dashboard/docs', icon: 'solicitacoes' },
-        { id: 5, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
-
-    ],
-    itensMenuCoordenador: [
-        { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
-        { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
-        { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
-        { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-        { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
-        { id: 6, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
-
-    ],
-    itensMenuDiretor: [
-        { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
-        { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
-        { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
-        { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-        { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
-        { id: 6, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
-
-    ],
-    itensMenuAdmin: [
-        { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
-        { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
-        { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
-        { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-        { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
-        { id: 6, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
-
-    ],
     cardData: [
         {
             id: 1001,

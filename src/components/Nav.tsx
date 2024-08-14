@@ -3,9 +3,9 @@ import { useState } from "react"
 import CustomLink from "./customLink";
 import { Bolt, ChevronLeft, ChevronRight, FilePen, GitCompareArrows, GitPullRequestArrow, LayoutDashboard, LogOut, UsersRound } from "lucide-react";
 import { Button } from "./ui/button";
-import { seed } from "@/dataDashboard";
+import { getMenuItemsByRole } from "@/dataDashboard";
 import Image from "next/image";
-import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const iconMap: Record<string, React.FC<{}>> = {
     dashboard: LayoutDashboard,
@@ -17,7 +17,9 @@ const iconMap: Record<string, React.FC<{}>> = {
 }
 
 export default function Nav() {
-    const { itensMenuProfessor, itensMenuCoordenador, itensMenuDiretor, itensMenuAdmin } = seed
+    const { data: session } = useSession()
+    const userRole = session?.user?.role
+    const menuItems = getMenuItemsByRole(userRole || '')
     const [isOpen, setIsOpen] = useState(true);
 
     const handleIsOpen = () => {
@@ -50,8 +52,8 @@ export default function Nav() {
                     </span>
                 </div>
                 <ul className="p-4 mt-8">
-                    {itensMenuAdmin.map((item) => {
-                        const Icon = iconMap[item.icon];
+                    {menuItems.map((item) => {
+                        const Icon = iconMap[item.icon]
                         return (
                             <li key={item.id}>
                                 <CustomLink href={item.link} nome={item.title}>
@@ -62,8 +64,7 @@ export default function Nav() {
                                 </CustomLink>
                             </li>
                         )
-                    })
-                    }
+                    })}
                 </ul>
             </div>
         </nav>

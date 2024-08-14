@@ -1,25 +1,13 @@
 import { signOut, useSession } from "next-auth/react";
-import DashTitle from "./dashTitle";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Card } from "./ui/card";
-import { DashNavbarProps } from "@/types";
+
 import {
     Bell,
-    Cloud,
     CreditCard,
-    Github,
-    Keyboard,
-    LifeBuoy,
     LogOut,
-    Mail,
-    MessageSquare,
-    Plus,
-    PlusCircle,
     Search,
     Settings,
     User,
-    UserPlus,
-    Users,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -29,12 +17,7 @@ import {
     DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuPortal,
-    DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
+    DropdownMenuSeparator, 
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Input } from "./ui/input";
