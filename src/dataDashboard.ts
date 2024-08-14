@@ -13,14 +13,14 @@ export const itensMenuCoordenador = [
     { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
     { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
     { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-    { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 5, title: 'Solicitações', link: '/dashboard/docs', icon: 'solicitacoes' },
     { id: 6, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
 
 ];
 export const itensMenuDiretor = [
     { id: 1, title: 'Dashboard', link: '/dashboard/dpainel', icon: 'dashboard' },
     { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
-    { id: 3, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 3, title: 'Solicitações', link: '/dashboard/docs', icon: 'solicitacoes' },
     { id: 4, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
 
 ]
@@ -30,7 +30,7 @@ export const itensMenuAdmin = [
     { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
     { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
     { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
-    { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+    { id: 5, title: 'Solicitações', link: '/dashboard/docs', icon: 'solicitacoes' },
     { id: 6, title: 'Configurações', link: '/dashboard/configuracoes', icon: 'settings' },
 
 ]
@@ -111,57 +111,24 @@ export const seed = {
             icon: BellRing,
         },
     ],
-
-
-    tableCursos: [
+    cardCadastro: [
         {
-            id: 1,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
+            id: 1001,
+            Label: 'Cadastro Campus',
+            link: '/dashboard/users/campus',
+            icon: School,
+        },
+        {       
+            id: 1002,
+            Label: 'Cadastro Diretor',
+            link: '/dashboard/users/diretor',
+            icon: GraduationCap,
         },
         {
-            id: 2,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
+            id: 1003,
+            Label: 'Cadastro Coordenador',
+            link: '/dashboard/users/diretor',
+            icon: Users,
         },
-        {
-            id: 3,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
-        },
-        {
-            id: 4,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
-        },
-        {
-            id: 5,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
-        },
-        {
-            id: 6,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
-        },
-        {
-            id: 7,
-            nome: 'Agronomia',
-            numero: 3422,
-            semestre: "3 Semestre",
-            coordenador: "Matheus",
-        },
-    ]
+    ],
 }

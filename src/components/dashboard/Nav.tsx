@@ -2,7 +2,7 @@
 import { useState } from "react"
 import CustomLink from "./customLink";
 import { Bolt, ChevronLeft, ChevronRight, FilePen, GitCompareArrows, GitPullRequestArrow, LayoutDashboard, LogOut, UsersRound } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { getMenuItemsByRole } from "@/dataDashboard";
 import Image from "next/image";
 import { useSession } from "next-auth/react";

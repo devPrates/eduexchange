@@ -110,13 +110,13 @@ export const columns: ColumnDef<Campus>[] = [
     accessorKey: "diretor",
     header: ({ column }) => {
         return (
-          <Button
-            variant="ghost"
+          <button
+            className="flex gap-1 items-center"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             Diretor
             <ArrowUpDown className="ml-2 h-4 w-4" />
-          </Button>
+          </button>
         )
       },
       cell: ({ row }) => <div className="lowercase">{row.getValue("diretor")}</div>,
@@ -125,13 +125,13 @@ export const columns: ColumnDef<Campus>[] = [
     accessorKey: "email",
     header: ({ column }) => {
       return (
-        <Button
-          variant="ghost"
+        <button
+          className="flex gap-1 items-center"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
           <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
+        </button>
       )
     },
     cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,

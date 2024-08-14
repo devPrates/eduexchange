@@ -1,6 +1,6 @@
 'use client'
-import DashCard from "@/components/DashCard";
-import DashNavbar from "@/components/DashNavbar";
+import DashCard from "@/components/dashboard/DashCard";
+import DashNavbar from "@/components/dashboard/DashNavbar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { seed } from "@/dataDashboard";
 

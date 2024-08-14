@@ -1,5 +1,5 @@
 'use client'
-import DashNavbar from "@/components/DashNavbar";
+import DashNavbar from "@/components/dashboard/DashNavbar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 export default function Dpainel() {
