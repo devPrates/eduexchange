@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "@/lib/utils"
 import { CardCadastroProps } from "@/types"
 import Link from "next/link"
