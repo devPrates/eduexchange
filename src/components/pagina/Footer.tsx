@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/types/variants";
 import { Link } from "react-scroll";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 import Copy from "./Copyright";
 
 export default function Footer() {

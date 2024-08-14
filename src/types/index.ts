@@ -16,3 +16,9 @@ export type CardProps = {
     amount: string;
     discription: string;
 }
+
+export type CardCadastroProps = {
+    label: string;
+    link: string;
+    icon: LucideIcon;
+}

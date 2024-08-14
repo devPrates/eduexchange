@@ -1,7 +1,7 @@
 import DateSelection from "./DateSelection";
 import HoursSelection from "./HoursSelection";
 import LocationSelection from "./LocationSection";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export default function SearchMobile() {
     return (

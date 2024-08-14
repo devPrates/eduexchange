@@ -2,6 +2,37 @@ import NextAuth from 'next-auth/next'
 import { NextAuthOptions } from 'next-auth'
 import CredentialProvider from 'next-auth/providers/credentials'
 
+const users = [
+    {
+        id: '1',
+        email: 'admin@gmail.com',
+        password: '123',
+        name: 'Administrador sistema',
+        role: 'admin'
+    },
+    {
+        id: '2',
+        email: 'diretor@gmail.com',
+        password: '123',
+        name: 'Diretor do Campus',
+        role: 'diretor'
+    },
+    {
+        id: '3',
+        email: 'coordenador@gmail.com',
+        password: '123',
+        name: 'Coordenador do Curso',
+        role: 'coordenador'
+    },
+    {
+        id: '4',
+        email: 'professor@gmail.com',
+        password: '123',
+        name: 'Professor do Curso',
+        role: 'professor'
+    }
+]
+
 const authOptions: NextAuthOptions = {
     providers: [
         CredentialProvider({
@@ -11,18 +42,11 @@ const authOptions: NextAuthOptions = {
                 password: { label: 'Password', type: 'password' }
             },
             async authorize(credentials) {
-                const user = {
-                    id: '1',
-                    email: 'admin@gmail.com',
-                    password: '123',
-                    name: 'Administrador sistema',
-                    role: 'admin'
-                }
+                const user = users.find(
+                    user => user.email === credentials?.email && user.password === credentials?.password
+                )
 
-                const isValidEmail = user.email === credentials?.email;
-                const isValidPassword = user.password === credentials?.password;
-
-                if(!isValidEmail || !isValidPassword) {
+                if (!user) {
                     return null
                 }
                 return user
@@ -32,8 +56,8 @@ const authOptions: NextAuthOptions = {
     callbacks: {
         jwt: ({ token, user }) => {
             const customUser = user as unknown as any
-            
-            if(user) {
+
+            if (user) {
                 return {
                     ...token,
                     role: customUser.role
@@ -46,11 +70,10 @@ const authOptions: NextAuthOptions = {
             return {
                 ...session,
                 user: {
-                    name: token.name,
-                    email: token.email,
-                    role: token.role
+                    ...session.user, // mantém os dados já presentes, como name e email
+                    role: token.role // adiciona a role
                 }
-            } 
+            }
         }
     },
     pages: {

@@ -2,10 +2,10 @@
 import { useState } from "react"
 import CustomLink from "./customLink";
 import { Bolt, ChevronLeft, ChevronRight, FilePen, GitCompareArrows, GitPullRequestArrow, LayoutDashboard, LogOut, UsersRound } from "lucide-react";
-import { Button } from "./ui/button";
-import { seed } from "@/dataDashboard";
+import { Button } from "../ui/button";
+import { getMenuItemsByRole } from "@/dataDashboard";
 import Image from "next/image";
-import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const iconMap: Record<string, React.FC<{}>> = {
     dashboard: LayoutDashboard,
@@ -17,7 +17,9 @@ const iconMap: Record<string, React.FC<{}>> = {
 }
 
 export default function Nav() {
-    const { itensMenu } = seed
+    const { data: session } = useSession()
+    const userRole = session?.user?.role
+    const menuItems = getMenuItemsByRole(userRole || '')
     const [isOpen, setIsOpen] = useState(true);
 
     const handleIsOpen = () => {
@@ -39,19 +41,17 @@ export default function Nav() {
             </Button>
             <div>
                 <div className=" h-20 flex flex-col items-center">
-                    <Image
-                        src='/logoDash.svg'
-                        width={40}
-                        height={40}
-                        alt="aaa"
-                    />
-                    <span className={`${isOpen ? 'hidden sm:block' : '!hidden'} font-bold text-md`}>
-                        ClassExchange
-                    </span>
+                        <Image
+                            src='/logoDash.svg'
+                            width={140}
+                            height={140}
+                            alt="aaa"
+                            className={`${isOpen ? 'hidden sm:block' : '!hidden'}`}
+                        />
                 </div>
                 <ul className="p-4 mt-8">
-                    {itensMenu.map((item) => {
-                        const Icon = iconMap[item.icon];
+                    {menuItems.map((item) => {
+                        const Icon = iconMap[item.icon]
                         return (
                             <li key={item.id}>
                                 <CustomLink href={item.link} nome={item.title}>
@@ -62,8 +62,7 @@ export default function Nav() {
                                 </CustomLink>
                             </li>
                         )
-                    })
-                    }
+                    })}
                 </ul>
             </div>
         </nav>

@@ -3,16 +3,17 @@
 import { useContext } from "react";
 import Search from "./Search";
 import { SearchContext } from "@/context/search";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { CalendarClock, ShieldCheck } from 'lucide-react';
 import Image from "next/image";
 import { motion, easeInOut } from "framer-motion";
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/types/variants";
 
 export default function Hero() {
     const { searchActive } = useContext(SearchContext)
     return (
         <section className="h-screen xl:h-[90vh] bg-[#b2b7c2]/10 bg-hero-image" id="home">
+            {/* texto e buttons */}
             <div className="container mx-auto h-full xl:pt-10">
                 <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
                     <div className="text-center xl:max-w-xl xl:text-left mt-16 xl:mt-0">
@@ -50,6 +51,8 @@ export default function Hero() {
                         </motion.div>
                     </div>
 
+
+                    {/* imagem */}
                     <motion.div
                         variants={fadeIn('up', 0.6)}
                         initial='hidden'

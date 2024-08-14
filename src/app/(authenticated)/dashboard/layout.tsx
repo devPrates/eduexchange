@@ -1,5 +1,5 @@
-import Dash from "@/components/Dash";
-import Nav from "@/components/Nav";
+import Dash from "@/components/dashboard/Dash";
+import Nav from "@/components/dashboard/Nav";
 
 type LayoutProps = {
   children: React.ReactNode;

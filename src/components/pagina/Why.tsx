@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
+import { fadeIn } from "@/types/variants";
 import { Handshake, KeySquare, TrendingUp  } from 'lucide-react';
 
 
