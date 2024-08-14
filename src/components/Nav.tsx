@@ -17,7 +17,7 @@ const iconMap: Record<string, React.FC<{}>> = {
 }
 
 export default function Nav() {
-    const { itensMenu } = seed
+    const { itensMenuProfessor, itensMenuCoordenador, itensMenuDiretor, itensMenuAdmin } = seed
     const [isOpen, setIsOpen] = useState(true);
 
     const handleIsOpen = () => {
@@ -50,7 +50,7 @@ export default function Nav() {
                     </span>
                 </div>
                 <ul className="p-4 mt-8">
-                    {itensMenu.map((item) => {
+                    {itensMenuAdmin.map((item) => {
                         const Icon = iconMap[item.icon];
                         return (
                             <li key={item.id}>

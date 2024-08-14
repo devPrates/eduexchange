@@ -70,9 +70,8 @@ const authOptions: NextAuthOptions = {
             return {
                 ...session,
                 user: {
-                    name: token.name,
-                    email: token.email,
-                    role: token.role
+                    ...session.user, // mantém os dados já presentes, como name e email
+                    role: token.role // adiciona a role
                 }
             }
         }

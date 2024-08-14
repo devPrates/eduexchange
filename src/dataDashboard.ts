@@ -1,7 +1,33 @@
-import { Activity, GitPullRequestArrow, GitCompareArrows, Users, User, BookAIcon, HouseIcon, BadgeCheck, SquareX, CircleAlert, BellRing } from "lucide-react";
+import { Users, BookAIcon, HouseIcon, BadgeCheck, SquareX, CircleAlert, BellRing } from "lucide-react";
 
 export const seed = {
-    itensMenu: [
+    itensMenuProfessor: [
+        { id: 1, title: 'Painel', link: '/dashboard/painel', icon: 'dashboard' },
+        { id: 2, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+        { id: 3, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+        { id: 4, title: 'Documentos', link: '/dashboard/docs', icon: 'solicitacoes' },
+        { id: 5, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
+
+    ],
+    itensMenuCoordenador: [
+        { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
+        { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
+        { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+        { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+        { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+        { id: 6, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
+
+    ],
+    itensMenuDiretor: [
+        { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
+        { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
+        { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },
+        { id: 4, title: 'Troca', link: '/dashboard/troca', icon: 'troca' },
+        { id: 5, title: 'Solicitações', link: '/dashboard/solicitacoes', icon: 'solicitacoes' },
+        { id: 6, title: 'Configurações', link: '/dashboard/settings', icon: 'settings' },
+
+    ],
+    itensMenuAdmin: [
         { id: 1, title: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
         { id: 2, title: 'Usuários', link: '/dashboard/users', icon: 'users' },
         { id: 3, title: 'Substituição', link: '/dashboard/substituicao', icon: 'substituicao' },

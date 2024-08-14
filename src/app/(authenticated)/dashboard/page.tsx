@@ -18,10 +18,13 @@ import {
     TableRow,
   } from "@/components/ui/table"
 import TableCursos from "@/components/TableCursos";
+import { useSession } from "next-auth/react";
   
 
 
 export default function Dashboard() {
+    const { data: session } = useSession()
+    const userRole = session?.user?.role
     const { cardData } = seed
     const [position, setPosition] = useState("top")
     return (
@@ -128,7 +131,11 @@ export default function Dashboard() {
                         </div>
                     </Tabs>
                 </div>
-
+                <div>
+            <h1>Bem-vindo, {session?.user?.name}!</h1>
+            <p>Sua role: {userRole}</p>
+            {userRole === 'admin' && <p>Você tem acesso administrativo.</p>}
+        </div>
 
             </section>
         </>
