@@ -70,10 +70,9 @@ interface ClassItem {
     teacherId?: string;
 }
 
-interface DaySchedule {
-    day: string;
-    date: string;
-    classes: ClassItem[];
+interface Row {
+    time: string;
+    [key: string]: ClassItem | null | string; // Permite chaves dinâmicas com valores ClassItem, null ou string
 }
 
 interface Props {
@@ -88,8 +87,8 @@ const ScheduleTable: React.FC<Props> = ({ teacherId }) => {
     const timeSlots = ['08:00', '09:00', '10:00', '11:00', '12:00'];
 
     // Define o tipo da row para incluir chaves dinâmicas
-    const tableData: { time: string } & Record<string, ClassItem | null>[] = timeSlots.map((timeSlot) => {
-        const row: { time: string } & Record<string, ClassItem | null> = { time: timeSlot };
+    const tableData: Row[] = timeSlots.map((timeSlot) => {
+        const row: Row = { time: timeSlot };
         daysOfWeek.forEach(day => {
             const dayData = scheduleData.find(d => d.day === day);
             const classItem = dayData?.classes.find(c => c.time === timeSlot);
@@ -124,14 +123,19 @@ const ScheduleTable: React.FC<Props> = ({ teacherId }) => {
                                 {daysOfWeek.map(day => (
                                     <td
                                         key={day}
-                                        className={`border border-gray-300 p-2 ${row[day]?.teacherId ? 'bg-yellow-100 cursor-pointer' : 'bg-gray-50'}`}
-                                        onClick={() => row[day] && handleCellClick(row[day])}
+                                        className={`border border-gray-300 p-2 ${row[day] && (row[day] as ClassItem).teacherId ? 'bg-yellow-100 cursor-pointer' : 'bg-gray-50'}`}
+                                        onClick={() => {
+                                            const classItem = row[day] as ClassItem;
+                                            if (classItem.teacherId) {
+                                                handleCellClick(classItem);
+                                            }
+                                        }}
                                     >
                                         {row[day] ? (
                                             <div>
-                                                <div className="font-medium">{row[day]?.subject}</div>
-                                                <div className="text-xs text-gray-600">Sala: {row[day]?.room}</div>
-                                                <div className="text-xs text-gray-600">Turma: {row[day]?.class}</div>
+                                                <div className="font-medium">{(row[day] as ClassItem).subject}</div>
+                                                <div className="text-xs text-gray-600">Sala: {(row[day] as ClassItem).room}</div>
+                                                <div className="text-xs text-gray-600">Turma: {(row[day] as ClassItem).class}</div>
                                             </div>
                                         ) : (
                                             <div className="text-gray-500">Sem Aula</div>
