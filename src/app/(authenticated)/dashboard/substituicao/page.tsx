@@ -2,7 +2,6 @@
 import DashCard from "@/components/dashboard/DashCard";
 import DashNavbar from "@/components/dashboard/DashNavbar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { seed } from "@/dataDashboard";
 import {
     Select,
     SelectContent,
@@ -24,6 +23,7 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 import { useState } from "react";
+import Schedule from "@/components/tables/TableAulas";
 
 export default function Substituicao() {
     const [date, setDate] = useState<Date>()
@@ -47,7 +47,7 @@ export default function Substituicao() {
 
 
 
-            <section className="container mt-3 p-2 bg-gray-400 rounded-lg flex gap-3">
+            <section className="container mt-3 p-2 flex gap-3">
                 <Select>
                     <SelectTrigger className="w-[180px]">
                         <SelectValue placeholder="Selecione o curso" />
@@ -96,6 +96,11 @@ export default function Substituicao() {
                     Buscar
                 </Button>
             </section>
+            
+            <div className="container mx-auto">
+                <Schedule teacherId="prof123" />
+
+            </div>
         </section>
     )
 }
