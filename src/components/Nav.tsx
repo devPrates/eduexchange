@@ -41,15 +41,13 @@ export default function Nav() {
             </Button>
             <div>
                 <div className=" h-20 flex flex-col items-center">
-                    <Image
-                        src='/logoDash.svg'
-                        width={40}
-                        height={40}
-                        alt="aaa"
-                    />
-                    <span className={`${isOpen ? 'hidden sm:block' : '!hidden'} font-bold text-md`}>
-                        ClassExchange
-                    </span>
+                        <Image
+                            src='/logoDash.svg'
+                            width={140}
+                            height={140}
+                            alt="aaa"
+                            className={`${isOpen ? 'hidden sm:block' : '!hidden'}`}
+                        />
                 </div>
                 <ul className="p-4 mt-8">
                     {menuItems.map((item) => {

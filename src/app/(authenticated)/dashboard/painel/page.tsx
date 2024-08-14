@@ -23,21 +23,8 @@ export default function Painel() {
 
 
         <div className=" container grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
-
-                {cardDataSubs.map((card => {
-                    return (
-                        <DashCard
-                            key={card.id}
-                            amount={card.amout}
-                            discription={card.description}
-                            icon={card.icon}
-                            label={card.Label}
-                        />
-                    )
-
-                }))
-                }
-            </div>
+            
+        </div>
     </section>
     )
 }

@@ -1,4 +1,4 @@
-import { Users, BookAIcon, HouseIcon, BadgeCheck, SquareX, CircleAlert, BellRing } from "lucide-react";
+import { Users, BookAIcon, HouseIcon, BadgeCheck, SquareX, CircleAlert, BellRing, School, GraduationCap, User } from "lucide-react";
 
 export const itensMenuProfessor = [
     { id: 1, title: 'Painel', link: '/dashboard/painel', icon: 'dashboard' },
@@ -54,30 +54,30 @@ export const seed = {
     cardData: [
         {
             id: 1001,
-            Label: 'Professores',
-            amout: '16',
-            description: 'Professores cadastrados',
-            icon: Users,
+            Label: 'Campus',
+            amout: '4',
+            description: 'Campus cadastrados',
+            icon: School,
         },
         {
             id: 1002,
-            Label: 'Turmas',
-            amout: '55',
-            description: 'Turmas cadastrados',
-            icon: Users,
+            Label: 'Diretores',
+            amout: '4',
+            description: 'Duretores cadastrados',
+            icon: GraduationCap,
         },
         {
             id: 1003,
-            Label: 'Cursos',
-            amout: '4',
-            description: 'Cursos cadastrados',
-            icon: HouseIcon,
+            Label: 'Coordenadores',
+            amout: '123',
+            description: 'Coordenadores cadastrados',
+            icon: Users,
         },
         {
             id: 1004,
-            Label: 'Disciplinas',
-            amout: '123',
-            description: 'Disciplinas cadastrados',
+            Label: 'Cursos',
+            amout: '75',
+            description: 'Cursos cadastrados',
             icon: BookAIcon,
         },
     ],
