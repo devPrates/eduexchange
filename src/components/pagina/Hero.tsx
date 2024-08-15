@@ -24,7 +24,7 @@ export default function Hero() {
                             viewport={{ once: false, amount: 0.6 }}
                             className="h1"
                         >
-                            Sistema de <span className="text-green-500">Troca & Substituição</span> de aulas
+                            Sistema de <span className="text-green-500">Substitução</span> de aulas
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
