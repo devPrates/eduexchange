@@ -28,7 +28,7 @@ export default function Nav() {
 
 
     return (
-        <nav className={`relative bg-gray-100 border-r-gray-200 border-r-[1px] max-w-20 h-screen sm:max-w-48 flex flex-col items-center justify-between
+        <nav className={`relative bg-gray-100 border-r-gray-200 border-r-[1px] max-w-20 h-screen sm:max-w-48 flex flex-col items-center justify-between py-6 
             ${isOpen ? 'w-1/4' : 'w-20'}`}
         >
             <Button onClick={handleIsOpen} className="hidden sm:block absolute top-7 transform right-[-18px] bg-primary text-white hover:bg-gray-800 p-1 w-8 h-8 rounded-full">
@@ -40,7 +40,7 @@ export default function Nav() {
                 }
             </Button>
             <div>
-                <div className="flex flex-col items-center">
+                <div className=" h-20 flex flex-col items-center">
                         <Image
                             src='/logoDash.svg'
                             width={140}
@@ -49,7 +49,7 @@ export default function Nav() {
                             className={`${isOpen ? 'hidden sm:block' : '!hidden'}`}
                         />
                 </div>
-                <ul className="p-4 mt-8 sm:mt-7">
+                <ul className="p-4 mt-8">
                     {menuItems.map((item) => {
                         const Icon = iconMap[item.icon]
                         return (

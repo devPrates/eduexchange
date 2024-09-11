@@ -194,15 +194,15 @@ export function DataTableDemo() {
       <div className="flex items-center py-4">
         <Input
           placeholder="Filtrar por Campus"
-          value={(table.getColumn("campus")?.getFilterValue() as string) ?? ""}
+          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("campus")?.setFilterValue(event.target.value)
+            table.getColumn("email")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="ml-auto">
+            <Button variant="outline" className="ml-auto">
               Opções <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
@@ -280,7 +280,7 @@ export function DataTableDemo() {
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} Linha(s) Selecionada(s).
+          {table.getFilteredRowModel().rows.length} Linhas(s) Selecionados.
         </div>
         <div className="space-x-2">
           <Button

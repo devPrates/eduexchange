@@ -24,7 +24,7 @@ export default function Hero() {
                             viewport={{ once: false, amount: 0.6 }}
                             className="h1"
                         >
-                            Sistema de <span className="text-green-500">Substitução</span> de aulas
+                            Sistema de <span className="text-buttons-verde-100">Troca & Substituição</span> de aulas
                         </motion.h1>
                         <motion.p
                             variants={fadeIn('down', 0.4)}
@@ -42,10 +42,10 @@ export default function Hero() {
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.8 }}
                         >
-                            <Button>
+                            <Button className="w-48 h-12 bg-buttons-verde-100">
                                 <CalendarClock className="mr-2 h-5 w-5" />Quadro de Horarios
                             </Button>
-                            <Button>
+                            <Button className="w-48 h-12 bg-buttons-verde-100">
                                 <ShieldCheck className="mr-2 h-5 w-5" />Acessar Sistema
                             </Button>
                         </motion.div>

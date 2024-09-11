@@ -19,7 +19,7 @@ export default function LocationSelection() {
                     <div className="w-full h-16 xl:h-full flex justify-center xl:justify-start xl:border-r xl:border-black/10">
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-col xl:flex-row items-center xl:gap-x-2 gap-y-2 xl:gap-y-0">
-                                <MapPin className="text-primary"/>
+                                <MapPin className="text-buttons-verde-100"/>
                                 <div className="text-[15px] uppercase font-bold">Selecione o Local</div>
                             </div>
                             <div className="uppercase font-medium text-[13px] text-gray-500 text-center xl:ml-8 xl:text-left">{location}</div>

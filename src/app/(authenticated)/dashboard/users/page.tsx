@@ -12,7 +12,7 @@ export default function users() {
     return (
         <section className="flex flex-col gap-5 w-full">
             <DashNavbar />
-            <div className="pl-5 container mx-auto">
+            <div className="pl-5">
                 <Breadcrumb>
                     <BreadcrumbList>
                         <BreadcrumbItem>

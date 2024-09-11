@@ -1,6 +1,5 @@
 import Dash from "@/components/dashboard/Dash";
 import Nav from "@/components/dashboard/Nav";
-import { Toaster } from "@/components/ui/sonner"
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: LayoutProps) {
         <Dash>
           {children}
         </Dash>
-        <Toaster />
       </div>
   );
 }

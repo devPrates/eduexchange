@@ -61,6 +61,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        buttons:{
+          "verde-100": "#37a63e",
+          "verde-90": "#4AAE51",
+          "verde-80": "#5DB663",
+          "verde-70": "#70BE75",
+          "verde-60": "#83C687",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

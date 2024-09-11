@@ -23,7 +23,8 @@ export default function Search() {
 
                 <div className="xl:h-full flex items-center px-6 xl:px-0">
                     <Button 
-                    size={"lg"} className="font-bold text-lg">
+                    size={"lg"} className="font-bold text-lg hover:text-black
+                    bg-buttons-verde-100 hover:bg-buttons-verde-90 transition duration-300">
                         Buscar 
                     </Button>
                 </div>
