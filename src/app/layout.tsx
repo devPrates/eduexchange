@@ -4,6 +4,7 @@ import "./globals.css";
 import { SearchContextProvider } from "@/context/search";
 import { AuthProvider } from "@/providers/auth-provider";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
